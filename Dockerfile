@@ -1,13 +1,11 @@
-# Dockerfile for CS312, Benjamin Brewster, Elijah Voigt
-# Simple NodeJS Hello World server
 FROM alpine:latest
-MAINTAINER Benjamin Brewster <brewsteb@oregonstate.edu>
 
 # Install the NodeJS runtime
 RUN apk -U add nodejs
 
 # Copy the server JS file
 COPY server.js /srv/server.js
+COPY Dockerfile .
 
 # Expose the port 8080 for HTTP
 EXPOSE 8080
